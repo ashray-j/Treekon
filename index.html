@@ -8,6 +8,10 @@
     
     <style>
         /* Base Styles */
+		* {
+    	    box-sizing: border-box;
+		}
+		
         :root {
             --primary-color: #0f172a;
             --accent-color: #3b82f6;
@@ -178,6 +182,23 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
+			
+			/* Enables horizontal swipe carousel on mobile */
+		    .content-grid {
+		        display: flex;
+		        overflow-x: auto;
+		        scroll-snap-type: x mandatory;
+		        gap: 1rem;
+		        padding: 1rem 0;
+		        -webkit-overflow-scrolling: touch;
+		        scrollbar-width: thin; /* Clean scrollbar for modern browsers */
+		    }
+
+		    /* Adjusts card width so the next card peeks into view */
+		    .card {
+		        flex: 0 0 82%;
+		        scroll-snap-align: start;
+		    }
         }
     </style>
 </head>
