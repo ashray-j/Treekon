@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Treekon - Deep Tech NV Magnetometers">
+    <title>Treekon | Quantum Sensing</title>
+    
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #3b82f6;
+            --text-color: #334155;
+            --bg-color: #ffffff;
+            --bg-alt: #f8fafc;
+        }
+
+        html {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+            /* Prevents the sticky header from covering section titles when clicked */
+            scroll-padding-top: 80px; 
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* Sticky Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        /* Branding */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo {
+	    height: 60px; /* This keeps it contained within the header */
+    	    width: auto;  /* This ensures the logo maintains its original proportions */
+    	    display: block;
+	}
+
+        .company-name {
+            font-size: 2.7rem;
+            font-weight: 500;
+            color: var(--accent-color);
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        /* Navigation */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Sections Layout */
+        section {
+            padding: 5rem 5%;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-alt {
+            background-color: var(--bg-alt);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Hero / About Section */
+        .hero-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        
+        .contact-info a {
+            color: var(--accent-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header>
+        <a href="#" class="brand">
+            <img src="treekon-logo.svg" alt="Treekon Logo" class="logo">
+            <h1 class="company-name">Treekon</h1>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#applications">Applications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="hero-text">
+            <p>Welcome to <strong>Treekon</strong> (त्रिकोण). We are a deep tech startup developing Quantum Diamond Magnetometers. Our mission is to commercialize high-precision instruments and bring laboratory proven quantum technologies into scalable, industrial environments.</p>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="section-alt">
+        <h2 class="section-title">Technology</h2>
+        <div class="content-grid">
+            <div class="card">
+                <h3>Nitrogen-Vacancy Centers</h3>
+                <p>We harness the quantum properties of NV centers in diamond to measure magnetic fields with unprecedented precision.</p>
+            </div>
+            <div class="card">
+                <h3>Room Temperature Operation</h3>
+                <p>Operations at room temperature, dramatically reducing overhead and deployment complexity.</p>
+            </div>
+            <div class="card">
+                <h3>Vector Magnetometry</h3>
+                <p>Not just measurement of the magnitude of a magnetic field; A full directional vector data with high spatial resolution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications">
+        <h2 class="section-title">Applications</h2>
+        <div class="content-grid">
+            <div class="card">
+                <h3>Defense & Security Intelligence</h3>
+                <p>Detecting concealed armaments and underground weapon stockpiles. Ultra-sensitive magnetic vectoring allows for the non-invasive discovery of shielded ferrous materials, deep bunkers, and hidden caches.</p>
+            </div>
+            <div class="card">
+                <h3>GPS-Denied Navigation</h3>
+                <p>Utilizing Earth's magnetic crustal anomalies to provide highly accurate, unjammable positioning and navigation data for aerospace and defense.</p>
+            </div>
+            <div class="card">
+                <h3>Ore & Subsurface Discovery</h3>
+                <p>Mapping geological structures and detecting subterranean porosity. Identify valuable mineral deposits and subsurface voids by measuring minute magnetic anomalies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-alt">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+            <p>Get entangled!</p>
+            <p>Reach out to us at: <a href="mailto:info@treekon.in">info@treekon.in</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Treekon Private Limited. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Script to automatically update footer year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
